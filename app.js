@@ -160,13 +160,12 @@ Exercise 3: Array.prototype.sort()
 Sort the inventors by birth date in ascending order (from those born furthest in
 the past to those born most recently).
 */
-
 let sortedByBirthYear = [];
 
 // Complete the exercise in the space below:
 
 sortedByBirthYear = inventors.sort((a,b) => {
-  return a.year - b.year
+   return (a.year - b.year)
 })
 
 
@@ -187,11 +186,11 @@ console.log('Exercise 3 correct result: ', [
   { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
 ]);
 
-inventors.sort((a,b) => {
-  return a.first.localeCompare(b.first)
-})
+// inventors.sort((a,b) => {
+//   return a.first.localeCompare(b.first)
+// })
 
-console.log(inventors)
+// console.log(inventors)
 
 /* 
 Exercise 4: Array.prototype.find()
@@ -211,7 +210,7 @@ let inventorNamedAda = {};
 // Complete the exercise in the space below:
 
 inventorNamedAda = inventors.find((element) => {
-  return element.first = 'Ada'
+  return element.first === 'Ada'
 })
 // Check your work:
 console.log('Exercise 4 my result: ', inventorNamedAda);
